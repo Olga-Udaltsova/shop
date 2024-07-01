@@ -1,0 +1,18 @@
+.btnHome, .btnShop {
+  color: #000;
+  cursor: pointer;
+}
+
+.btnHome {
+  border-left: 2px solid #000;
+  padding-left: 15px;
+}
+
+.btnHome, .btnShop p {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.btnHome:hover, .btnShop:hover {
+  color: #FF8E8E;
+}
