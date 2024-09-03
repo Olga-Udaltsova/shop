@@ -6,7 +6,7 @@ import { Quantity } from "./QuantityProducts/QuantityProducts";
 import { Sort } from "./Sort/Sort";
 import { Product } from "./Product/Product";
 import { Pagination } from "./Pagination/Pagination";
-import { News } from "./News/News";
+import { News } from "../../components/News/News";
 import { getProducts } from "../../helpers/modifyData";
 import { Link } from "../../components/ui/Link/Link";
 import { NoProducts } from "../../components/NoProducts/NoProducts";

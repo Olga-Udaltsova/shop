@@ -1,7 +1,7 @@
-import background_img from "../../../images/background_img.png";
-import background from "../../../images/background.svg";
-import { Container } from "../../../components/Container/Container";
-import { Button } from "../../../components/ui/Button/Button";
+import background_img from "../../images/background_img.png";
+import background from "../../images/background.svg";
+import { Container } from "../Container/Container";
+import { Button } from "../ui/Button/Button";
 import * as SC from "./styles";
 
 export const News = () => (
