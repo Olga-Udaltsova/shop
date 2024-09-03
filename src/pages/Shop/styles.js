@@ -1,17 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  max-width: 1800px;
-  width: 100%;
-  margin: 50px auto;
-  position: relative;
-`;
-
 export const Main = styled.main`
-  width: 100%;
   display: flex;
-  gap: 30px;
-  margin: 50px auto;
+  gap: 50px;
 `;
 
 export const QuantityAndSort = styled.div`
@@ -30,6 +21,6 @@ export const Clothes = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 30px;
+  gap: 40px 60px;
   flex-basis: 30%;
 `;

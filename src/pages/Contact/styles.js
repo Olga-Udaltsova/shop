@@ -6,7 +6,7 @@ export const Contact = styled.div`
 
 export const Content = styled.div`
   position: relative;
-  top: 200px;
+  top: 100px;
   display: flex;
   gap: 115px;
   align-items: center;
@@ -14,13 +14,12 @@ export const Content = styled.div`
   > img {
     width: 194px;
     position: absolute;
-    top: 20px;
-    right: 200px;
+    top: 30px;
+    right: 400px;
   }
 `;
 
 export const Image = styled.div`
-  margin-top: 100px;
   img {
     width: 100%;
   }

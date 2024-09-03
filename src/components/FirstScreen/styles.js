@@ -5,6 +5,7 @@ export const FirstScreen = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 200px;
   img:first-child {
     margin-top: 30px;
   }

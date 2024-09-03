@@ -1,9 +1,10 @@
 import { useContext, useState } from "react";
 import { FirstScreen } from "../../components/FirstScreen/FirstScreen";
+import { Container } from "../../components/Container/Container";
 import { YourCart } from "./YourCart/YourCart";
 import { PromoCode } from "./PromoCode/PromoCode";
 import { Product } from "./Product/Product";
-import { NavLink } from "react-router-dom";
+import { Link } from "../../components/ui/Link/Link";
 import * as SC from "./styles";
 import { NoProducts } from "../../components/NoProducts/NoProducts";
 import { ProductsContext } from "../../context/ProductsContext";
@@ -25,13 +26,11 @@ export const Cart = () => {
 
   return (
     <>
-      <FirstScreen title='Cart'>
-        <NavLink to="/cart" className="btnLink">
-          Cart
-        </NavLink>
+      <FirstScreen title="Cart">
+        <Link to="/cart">Cart</Link>
       </FirstScreen>
       {productsInLSCart.length !== 0 ? (
-        <SC.Container>
+        <Container>
           <SC.YourOrder>
             <SC.Purchases>
               {productsInLSCart.map((product) => (
@@ -41,10 +40,10 @@ export const Cart = () => {
 
             <YourCart discount={discount} />
           </SC.YourOrder>
-          <SC.Container>
+          <Container>
             <PromoCode promo={promo} addPromo={addPromo} getPromo={getPromo} />
-          </SC.Container>
-        </SC.Container>
+          </Container>
+        </Container>
       ) : (
         <NoProducts>Нет товаров в корзине :(</NoProducts>
       )}

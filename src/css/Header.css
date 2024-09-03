@@ -1,7 +1,0 @@
-.DropDownMenu {
-    padding-right: 20px;
-    background: right no-repeat url('../icons/chevron-down_black.svg');
-}
-.DropDownMenu:hover {
-    background: right no-repeat url('../icons/chevron-down_pink.svg');
-}

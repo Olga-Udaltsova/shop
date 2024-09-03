@@ -7,6 +7,7 @@ import payonner from "../../icons/Payonner.svg";
 import send from "../../icons/send.svg";
 import { Container } from "../Container/Container";
 import { SocialNetworks } from "../ui/SocialNetworks/SocialNetworks";
+import { Link } from "../../components/ui/Link/Link";
 import * as SC from "./styles";
 
 export const Footer = () => (
@@ -33,22 +34,42 @@ export const Footer = () => (
           <SC.SecondAndThirdBI>
             <p>About</p>
             <ul>
-              <li>About us</li>
-              <li>Collections</li>
-              <li>Shop</li>
-              <li>Blog</li>
-              <li>Contact us</li>
+              <li>
+                <Link to="/about">About us</Link>
+              </li>
+              <li>
+                <Link to="/">Collections</Link>
+              </li>
+              <li>
+                <Link to="/shop">Shop</Link>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact us</Link>
+              </li>
             </ul>
           </SC.SecondAndThirdBI>
 
           <SC.SecondAndThirdBI>
             <p>Useful links</p>
             <ul>
-              <li>Privacy Policy</li>
-              <li>Terms of use</li>
-              <li>Support</li>
-              <li>Shipping details</li>
-              <li>FAQs</li>
+              <li>
+                <Link to="/">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link to="/">Terms of use</Link>
+              </li>
+              <li>
+                <Link to="/">Support</Link>
+              </li>
+              <li>
+                <Link to="/">Shipping details</Link>
+              </li>
+              <li>
+                <Link to="/">FAQs</Link>
+              </li>
             </ul>
           </SC.SecondAndThirdBI>
 
