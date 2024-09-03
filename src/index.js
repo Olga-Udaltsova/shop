@@ -6,6 +6,9 @@ import { Shop } from "./pages/Shop/Shop";
 import { Cart } from "./pages/Cart/Cart";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { About } from "./pages/About/About";
+import { Contact } from "./pages/Contact/Contact";
+import { Blog } from "./pages/Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -14,11 +17,24 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        path: "shop",
         element: <Shop />,
       },
       {
         path: "cart",
         element: <Cart />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "blog",
+        element: <Blog />,
       },
     ],
   },

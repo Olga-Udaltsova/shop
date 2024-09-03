@@ -74,19 +74,3 @@ export const Checkboxs = styled.div`
     }
   }
 `;
-
-export const ButtonFilter = styled.button`
-  border: none;
-  background: #000;
-  margin-top: 50px;
-  padding: 17px 74.5px;
-  color: #fff;
-  cursor: pointer;
-  &:hover {
-    background: #ff8e8e;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-  }
-`;

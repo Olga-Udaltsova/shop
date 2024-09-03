@@ -25,10 +25,10 @@ export const Header = () => {
               <SC.Link to="/">Pages </SC.Link>
             </div>
             <div className="DropDownMenu">
-              <SC.Link to="/">Shop</SC.Link>
+              <SC.Link to="/shop">Shop</SC.Link>
             </div>
-            <SC.Link to="/">Blog</SC.Link>
-            <SC.Link to="/">Contact</SC.Link>
+            <SC.Link to="/blog">Blog</SC.Link>
+            <SC.Link to="/contact">Contact</SC.Link>
           </SC.NavMenu>
         </SC.Menu>
         <SC.Icons>

@@ -1,6 +1,7 @@
-.btnHome, .btnShop {
+.btnHome, .btnLink {
   color: #000;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btnHome {
@@ -8,11 +9,11 @@
   padding-left: 15px;
 }
 
-.btnHome, .btnShop p {
+.btnHome, .btnLink p {
   font-weight: 500;
   font-size: 16px;
 }
 
-.btnHome:hover, .btnShop:hover {
+.btnHome:hover, .btnLink:hover {
   color: #FF8E8E;
 }

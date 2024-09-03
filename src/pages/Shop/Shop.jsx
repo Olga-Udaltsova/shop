@@ -42,9 +42,9 @@ export const Shop = () => {
 
   return (
     <ProductUpdateContext.Provider value={value}>
-      <FirstScreen>
-        <NavLink to="/cart" className="btnShop">
-          Cart
+      <FirstScreen title={'Shop'}>
+        <NavLink to="/shop" className="btnLink">
+          Shop
         </NavLink>
       </FirstScreen>
       <SC.Container>

@@ -104,8 +104,3 @@ export const Links = styled.div`
   flex-direction: column;
   gap: 20px;
 `;
-
-export const SocialNetwork = styled.div`
-  display: flex;
-  gap: 15px;
-`;

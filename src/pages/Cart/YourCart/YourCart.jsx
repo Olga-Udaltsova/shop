@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import * as SC from "./styles";
 import { ProductsContext } from "../../../context/ProductsContext";
+import { Button } from "../../../components/ui/Button/Button";
 
 export const YourCart = ({ discount }) => {
   const { productsInLSCart } = useContext(ProductsContext);
@@ -38,9 +39,9 @@ export const YourCart = ({ discount }) => {
       <SC.Total>
         <p>Total</p> <span>$ {getOrderPrice()}</span>
       </SC.Total>
-      <SC.ButtonCheck onClick={() => console.log(productsInLSCart)}>
+      <Button onClick={() => console.log(productsInLSCart)}>
         Checkout
-      </SC.ButtonCheck>
+      </Button>
     </SC.YourCart>
   );
 };
