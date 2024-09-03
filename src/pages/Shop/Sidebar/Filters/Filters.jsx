@@ -6,6 +6,7 @@ import {
 } from "../../../../helpers/parseData";
 import { ProductUpdateContext } from "../../../../context/ProductUpdateContext";
 import { getProducts } from "../../../../helpers/modifyData";
+import { Button } from "../../../../components/ui/Button/Button";
 import * as SC from "./styles";
 
 export const Filters = () => {
@@ -137,7 +138,13 @@ export const Filters = () => {
           ))}
         </SC.Checkboxs>
 
-        <SC.ButtonFilter onClick={applyFilters}>Apply Filter</SC.ButtonFilter>
+        <Button
+          onClick={applyFilters}
+          className="apply"
+          disabled={!(minPrice || maxPrice) && "disabled"}
+        >
+          Apply Filter
+        </Button>
       </div>
     </>
   );

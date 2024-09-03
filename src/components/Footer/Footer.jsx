@@ -6,6 +6,7 @@ import paypal from "../../icons/Paypal.svg";
 import payonner from "../../icons/Payonner.svg";
 import send from "../../icons/send.svg";
 import { Container } from "../Container/Container";
+import { SocialNetworks } from "../ui/SocialNetworks/SocialNetworks";
 import * as SC from "./styles";
 
 export const Footer = () => (
@@ -25,9 +26,7 @@ export const Footer = () => (
             <hr />
             <SC.Links>
               <p>Find us here:</p>
-              <SC.SocialNetwork>
-                <p>Fb</p> - <p>tw</p> - <p>ins</p> -<p>pt</p>
-              </SC.SocialNetwork>
+              <SocialNetworks />
             </SC.Links>
           </SC.FirstColumnBI>
 

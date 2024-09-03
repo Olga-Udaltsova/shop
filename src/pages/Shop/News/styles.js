@@ -35,14 +35,4 @@ export const Subscribe = styled.div`
     border-bottom: 1px solid #444;
     padding-bottom: 16px;
   }
-  > button {
-    border: none;
-    background: #000;
-    color: #fff;
-    padding: 17px 30px;
-    cursor: pointer;
-    &:hover {
-      background: #ff8e8e;
-    }
-  }
 `;

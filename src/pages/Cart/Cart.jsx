@@ -25,9 +25,9 @@ export const Cart = () => {
 
   return (
     <>
-      <FirstScreen>
-        <NavLink to="/" className="btnShop">
-          Shop
+      <FirstScreen title='Cart'>
+        <NavLink to="/cart" className="btnLink">
+          Cart
         </NavLink>
       </FirstScreen>
       {productsInLSCart.length !== 0 ? (

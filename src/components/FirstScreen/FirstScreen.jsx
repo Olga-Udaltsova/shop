@@ -6,18 +6,21 @@ import { Container } from "../Container/Container";
 import "../../css/FirstScreen.css";
 import * as SC from "./styles";
 
-export const FirstScreen = ({ children }) => (
+export const FirstScreen = ({ title,children }) => (
   <Container>
     <SC.FirstScreen>
       <img src={background} alt="background" />
-      <SC.FirstScreenHead>
-        {children.props.children === "Cart" ? "Shop" : "Cart"}
-      </SC.FirstScreenHead>
+      <SC.FirstScreenHead>{title}</SC.FirstScreenHead>
       <SC.ButtonsAndLine>
         <SC.Buttons>
           <NavLink to="/" className="btnHome">
             Home
           </NavLink>
+          {title === "Cart" && (
+            <NavLink to="/shop" className="btnLink">
+              Shop
+            </NavLink>
+          )}
           {children}
         </SC.Buttons>
         <img src={line} alt="line" />

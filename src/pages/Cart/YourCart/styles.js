@@ -33,14 +33,3 @@ export const Total = styled.div`
   justify-content: space-between;
 `;
 
-export const ButtonCheck = styled.button`
-  border: none;
-  background-color: #000;
-  color: #fff;
-  padding: 17px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #ff8e8e;
-  }
-`;
