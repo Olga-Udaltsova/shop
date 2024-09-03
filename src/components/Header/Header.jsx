@@ -7,8 +7,8 @@ import heart from "../../icons/heart.svg";
 import bag from "../../icons/shopping-bag.svg";
 import { Container } from "../Container/Container";
 import { ProductsContext } from "../../context/ProductsContext";
+import { Link } from "../ui/Link/Link";
 import * as SC from "./styles";
-import "../../css/Header.css";
 
 export const Header = () => {
   const { productsInLSFavorites, productsInLSCart } =
@@ -20,37 +20,38 @@ export const Header = () => {
           <img src={burger_menu} alt="menu" />
           <img src={logo} alt="logo" />
           <SC.NavMenu>
-            <SC.Link to="/">Home</SC.Link>
-            <div className="DropDownMenu">
-              <SC.Link to="/">Pages </SC.Link>
-            </div>
-            <div className="DropDownMenu">
-              <SC.Link to="/shop">Shop</SC.Link>
-            </div>
-            <SC.Link to="/blog">Blog</SC.Link>
-            <SC.Link to="/contact">Contact</SC.Link>
+            <Link to="/">Home</Link>
+            <SC.DropDownMenu>
+              <Link to="/pages">Pages</Link>
+            </SC.DropDownMenu>
+            <SC.DropDownMenu>
+              <Link to="/shop">Shop</Link>
+            </SC.DropDownMenu>
+            <Link to="/blog">Blog</Link>
+            <Link to="/contact">Contact</Link>
           </SC.NavMenu>
         </SC.Menu>
-        <SC.Icons>
-          <SC.Link to="/">
-            <img src={search} alt="search" />
-          </SC.Link>
-          <SC.Link to="/">
-            <img src={user} alt="user" />
-          </SC.Link>
 
-          <SC.Link to="/">
+        <SC.Icons>
+          <div>
+            <img src={search} alt="search" />
+          </div>
+          <Link to="/">
+            <img src={user} alt="user" />
+          </Link>
+
+          <Link to="/">
             <SC.FavoriteAndCart>
               <img src={heart} alt="heart" />
               <div>{productsInLSFavorites.length}</div>
             </SC.FavoriteAndCart>
-          </SC.Link>
-          <SC.Link to="/cart">
+          </Link>
+          <Link to="/cart">
             <SC.FavoriteAndCart>
               <img src={bag} alt="bag" />
               <div>{productsInLSCart.length}</div>
             </SC.FavoriteAndCart>
-          </SC.Link>
+          </Link>
         </SC.Icons>
       </SC.Header>
     </Container>

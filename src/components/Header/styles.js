@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import arrowBlack from "../../icons/chevron-down_black.svg";
+import arrowPink from "../../icons/chevron-down_pink.svg";
 
 export const Header = styled.header`
   display: flex;
@@ -19,11 +21,13 @@ export const NavMenu = styled.div`
   align-items: flex-end;
 `;
 
-export const Link = styled(NavLink)`
-  text-decoration: none;
-  color: #000;
+export const DropDownMenu = styled.div`
+  padding-right: 20px;
+  background: right no-repeat;
+  background-image: url(${arrowBlack});
+  cursor: pointer;
   &:hover {
-    color: #ff8e8e;
+    background-image: url(${arrowPink});
   }
 `;
 
@@ -47,5 +51,8 @@ export const FavoriteAndCart = styled.div`
     align-items: center;
     justify-content: center;
     font-size: 10px;
+    &:hover {
+      background-color: #ff8e8e;
+    }
   }
 `;

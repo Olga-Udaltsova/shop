@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FirstScreen } from "../../components/FirstScreen/FirstScreen";
+import { Container } from "../../components/Container/Container";
 import { Sidebar } from "./Sidebar/Sidebar";
 import { Quantity } from "./QuantityProducts/QuantityProducts";
 import { Sort } from "./Sort/Sort";
@@ -7,7 +8,7 @@ import { Product } from "./Product/Product";
 import { Pagination } from "./Pagination/Pagination";
 import { News } from "./News/News";
 import { getProducts } from "../../helpers/modifyData";
-import { NavLink } from "react-router-dom";
+import { Link } from "../../components/ui/Link/Link";
 import { NoProducts } from "../../components/NoProducts/NoProducts";
 import { ProductUpdateContext } from "../../context/ProductUpdateContext";
 import * as SC from "./styles";
@@ -42,12 +43,10 @@ export const Shop = () => {
 
   return (
     <ProductUpdateContext.Provider value={value}>
-      <FirstScreen title={'Shop'}>
-        <NavLink to="/shop" className="btnLink">
-          Shop
-        </NavLink>
+      <FirstScreen title={"Shop"}>
+        <Link to="/shop">Shop</Link>
       </FirstScreen>
-      <SC.Container>
+      <Container>
         <SC.Main>
           <Sidebar />
           <SC.MainContent>
@@ -67,7 +66,7 @@ export const Shop = () => {
             {total === 0 ? null : <Pagination />}
           </SC.MainContent>
         </SC.Main>
-      </SC.Container>
+      </Container>
       <News />
     </ProductUpdateContext.Provider>
   );

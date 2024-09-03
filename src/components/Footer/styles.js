@@ -90,6 +90,7 @@ export const Input = styled.div`
     border: none;
     border-bottom: 1px solid #444;
     padding-bottom: 16px;
+    outline: none;
   }
   > button {
     border: none;
