@@ -12,6 +12,7 @@ const Cart = lazy(() => import("./pages/Cart/Cart"));
 const About = lazy(() => import("./pages/About/About"));
 const Contact = lazy(() => import("./pages/Contact/Contact"));
 const Blog = lazy(() => import("./pages/Blog/Blog"));
+const Page404 = lazy(() => import("./pages/404/404"));
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loader />}>
             <Blog />
+          </Suspense>
+        ),
+      },
+      {
+        path: "pages",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Page404 />
           </Suspense>
         ),
       },
