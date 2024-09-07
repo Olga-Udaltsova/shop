@@ -1,14 +1,17 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { App } from "./App";
-import { Shop } from "./pages/Shop/Shop";
-import { Cart } from "./pages/Cart/Cart";
+import { Loader } from "./components/ui/Loader/Loader";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { About } from "./pages/About/About";
-import { Contact } from "./pages/Contact/Contact";
-import { Blog } from "./pages/Blog/Blog";
+
+const Home = lazy(() => import("./pages/Home/Home"));
+const Shop = lazy(() => import("./pages/Shop/Shop"));
+const Cart = lazy(() => import("./pages/Cart/Cart"));
+const About = lazy(() => import("./pages/About/About"));
+const Contact = lazy(() => import("./pages/Contact/Contact"));
+const Blog = lazy(() => import("./pages/Blog/Blog"));
 
 const router = createBrowserRouter([
   {
@@ -17,24 +20,51 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Home />
+          </Suspense>
+        ),
+      },
+      {
         path: "shop",
-        element: <Shop />,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Shop />
+          </Suspense>
+        ),
       },
       {
         path: "cart",
-        element: <Cart />,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Cart />
+          </Suspense>
+        ),
       },
       {
         path: "about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "contact",
-        element: <Contact />,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Contact />
+          </Suspense>
+        ),
       },
       {
         path: "blog",
-        element: <Blog />,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Blog />
+          </Suspense>
+        ),
       },
     ],
   },

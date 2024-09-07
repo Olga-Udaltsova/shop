@@ -7,22 +7,24 @@ import banner from "../../images/background_img.png";
 import { Contacts } from "./Contacts/Contacts";
 import * as SC from "./styles";
 
-export const Contact = () => (
-  <SC.Contact>
-    <FirstScreen title="Contact">
-      <Link to="/contact" className="btnLink">
-        Contact
-      </Link>
-    </FirstScreen>
-    <Container>
-      <SC.Content>
-        <img src={background} alt="background" />
-        <GetItTouch />
-        <Contacts />
-      </SC.Content>
-      <SC.Image>
-        <img src={banner} alt="banner" />
-      </SC.Image>
-    </Container>
-  </SC.Contact>
-);
+export default function Contact() {
+  return (
+    <SC.Contact>
+      <FirstScreen title="Contact">
+        <Link to="/contact" className="btnLink">
+          Contact
+        </Link>
+      </FirstScreen>
+      <Container>
+        <SC.Content>
+          <img src={background} alt="background" />
+          <GetItTouch />
+          <Contacts />
+        </SC.Content>
+        <SC.Image>
+          <img src={banner} alt="banner" />
+        </SC.Image>
+      </Container>
+    </SC.Contact>
+  );
+}

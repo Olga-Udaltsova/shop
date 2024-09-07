@@ -7,19 +7,21 @@ import { MultiBrand } from "./Multi-brand/Multi-Brand";
 import { WhyUs } from "./Why-us/Why-us";
 import { Brands } from "./Brands/Brands";
 
-export const About = () => (
-  <>
-    <FirstScreen title="About">
-      <Link to="/about" className="btnLink">
-        About
-      </Link>
-    </FirstScreen>
-    <Container>
-      <AboutUs />
-      <MultiBrand />
-      <WhyUs />
-      <News />
-      <Brands />
-    </Container>
-  </>
-);
+export default function About() {
+  return (
+    <>
+      <FirstScreen title="About">
+        <Link to="/about" className="btnLink">
+          About
+        </Link>
+      </FirstScreen>
+      <Container>
+        <AboutUs />
+        <MultiBrand />
+        <WhyUs />
+        <News />
+        <Brands />
+      </Container>
+    </>
+  );
+}

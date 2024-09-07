@@ -9,7 +9,7 @@ import * as SC from "./styles";
 import { NoProducts } from "../../components/NoProducts/NoProducts";
 import { ProductsContext } from "../../context/ProductsContext";
 
-export const Cart = () => {
+export default function Cart() {
   const { productsInLSCart } = useContext(ProductsContext);
   const [promo, setPromo] = useState("");
   const [discount, setDiscount] = useState(0);
@@ -49,4 +49,4 @@ export const Cart = () => {
       )}
     </>
   );
-};
+}

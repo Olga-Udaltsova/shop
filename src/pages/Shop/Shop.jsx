@@ -13,7 +13,7 @@ import { NoProducts } from "../../components/NoProducts/NoProducts";
 import { ProductUpdateContext } from "../../context/ProductUpdateContext";
 import * as SC from "./styles";
 
-export const Shop = () => {
+export default function Shop() {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortType, setSortType] = useState("");
   const [search, setSearch] = useState("");
@@ -70,4 +70,4 @@ export const Shop = () => {
       <News />
     </ProductUpdateContext.Provider>
   );
-};
+}
